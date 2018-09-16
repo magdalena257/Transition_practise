@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie 1 - zmiana koloru po najechaniu</title>
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .circle {
+            background-color: black;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            border-radius: 100%;
+            border: 3px solid white;
+
+        }
+
+        div.red {
+            background-color: red;
+            top: 10px;
+            left: 10px;
+        }
+
+        div.green {
+            background-color: green;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        div.blue {
+            background-color: blue;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        div.orange {
+            background-color: orange;
+            top: 10px;
+            right: 10px;
+        }
+
+        .bg {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: grey;
+            z-index: -1;
+        }
+
+        .bg p {
+            text-align: center;
+            position: absolute;
+            font-family: 'Saira', sans-serif;
+            opacity: 0;
+            transition: .5s;
+            line-height: 100vh;
+            font-size: 30px;
+            margin: 0;
+            width: 100%;
+        }
+
+        p.red {
+            background-color: red;
+        }
+
+        p.green {
+            background-color: green;
+        }
+
+        p.blue {
+            background-color: blue;
+        }
+
+        p.orange {
+            background-color: orange;
+        }
+
+        div.red:hover~div.bg>p.red {
+            opacity: 1;
+
+        }
+
+        div.blue:hover~div.bg>p.blue {
+            opacity: 1;
+
+        }
+
+        div.green:hover~div.bg>p.green {
+            opacity: 1;
+
+        }
+
+        div.orange:hover~div.bg>p.orange {
+            opacity: 1;
+
+        }
+
+        p.grey {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="red circle"></div>
+    <div class="green circle"></div>
+    <div class="blue circle"></div>
+    <div class="orange circle"></div>
+    <div class="bg">
+        <p class="grey">Hover the dots</p>
+        <p class="red">Red</p>
+        <p class="green">Green</p>
+        <p class="blue">Blue</p>
+        <p class="orange">Orange</p>
+    </div>
+</body>
+
+</html>
